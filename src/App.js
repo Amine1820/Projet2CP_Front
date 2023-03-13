@@ -8,11 +8,12 @@ import { RequireAuth } from "react-auth-kit";
 import Home from "./components/Home";
 import Welcome from "./components/Welcome";
 import Waitings from "./components/Waitings";
+import AboutUs from "./components/AboutUs";
+import Events from "./components/Events";
 
 function App() {
   return (
     <div className="App">
-      <Navbar />
       <Routes>
         <Route path="/" element={<Home />}></Route>
         <Route path="/login" element={<Login />} />
@@ -34,7 +35,9 @@ function App() {
         />
         <Route path="/register" element={<Register />} />
         <Route path="/welcome" element={<Welcome />} />
-      </Routes>
+        <Route path = "/aboutus" element={<AboutUs/>}></Route>
+        <Route path = "/events" element={<Events/>}></Route>
+       </Routes>
     </div>
   );
 }
