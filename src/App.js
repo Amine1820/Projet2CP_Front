@@ -16,7 +16,7 @@ function App() {
     <div className="App">
       <Routes>
         <Route path="/" element={<Home />}></Route>
-        <Route path="/login" element={<Login />} />
+        <Route path="/login" exact element={<Login />} />
         <Route
           path="/profile"
           element={
@@ -25,7 +25,7 @@ function App() {
             </RequireAuth>
           }
         />
-         <Route
+        <Route
           path="/waitings_dashboard"
           element={
             <RequireAuth loginPath="/login">
@@ -35,9 +35,9 @@ function App() {
         />
         <Route path="/register" element={<Register />} />
         <Route path="/welcome" element={<Welcome />} />
-        <Route path = "/aboutus" element={<AboutUs/>}></Route>
-        <Route path = "/events" element={<Events/>}></Route>
-       </Routes>
+        <Route path="/aboutus" element={<AboutUs />}></Route>
+        <Route path="/events" element={<Events />}></Route>
+      </Routes>
     </div>
   );
 }

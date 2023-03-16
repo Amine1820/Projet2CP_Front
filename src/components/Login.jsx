@@ -14,7 +14,6 @@ const Login = () => {
       password: "",
     },
     onSubmit: async (values) => {
-      console.log(values);
       setError("");
       try {
         const response = await axios.post(
@@ -84,7 +83,9 @@ const Login = () => {
 
     //       <div className="flex items-center justify-between">
     //         <button
-    //           className="bg-blue-700 hover:bg-blue-dark text-white font-bold py-2 px-4 rounded"
+    //
+
+    //className="bg-blue-700 hover:bg-blue-dark text-white z- font-bold py- px-4 rounded"
     //           type="submit"
     //         >
     //           Sign In
@@ -104,7 +105,6 @@ const Login = () => {
         {" "}
       </a>
       <svg
-      class="bottom-3"
         width="280"
         height="54"
         viewBox="0 0 280 54"
@@ -201,12 +201,12 @@ const Login = () => {
             gradientUnits="userSpaceOnUse"
           >
             <stop stopColor="#FF0303" />
-            <stop offset="0.1" stop-color="#F60505" />
-            <stop offset="0.25" stop-color="#DF0A0C" />
-            <stop offset="0.45" stop-color="#BA1417" />
-            <stop offset="0.67" stop-color="#852126" />
-            <stop offset="0.92" stop-color="#443239" />
-            <stop offset="1" stop-color="#2E3840" />
+            <stop offset="0.1" stopColor="#F60505" />
+            <stop offset="0.25" stopColor="#DF0A0C" />
+            <stop offset="0.45" stopColor="#BA1417" />
+            <stop offset="0.67" stopColor="#852126" />
+            <stop offset="0.92" stopColor="#443239" />
+            <stop offset="1" stopColor="#2E3840" />
           </linearGradient>
           <linearGradient
             id="paint1_linear_526_653"
@@ -216,17 +216,17 @@ const Login = () => {
             y2="35.3437"
             gradientUnits="userSpaceOnUse"
           >
-            <stop stop-color="#F9DBBB" />
-            <stop offset="0.04" stop-color="#FAAF95" />
-            <stop offset="0.1" stop-color="#FB7E6B" />
-            <stop offset="0.16" stop-color="#FC5548" />
-            <stop offset="0.21" stop-color="#FD352D" />
-            <stop offset="0.27" stop-color="#FE1E19" />
-            <stop offset="0.32" stop-color="#FE100E" />
-            <stop offset="0.36" stop-color="#FF0C0A" />
-            <stop offset="0.49" stop-color="#FD2F28" />
-            <stop offset="0.76" stop-color="#FB8975" />
-            <stop offset="1" stop-color="#F9DBBB" />
+            <stop stopColor="#F9DBBB" />
+            <stop offset="0.04" stopColor="#FAAF95" />
+            <stop offset="0.1" stopColor="#FB7E6B" />
+            <stop offset="0.16" stopColor="#FC5548" />
+            <stop offset="0.21" stopColor="#FD352D" />
+            <stop offset="0.27" stopColor="#FE1E19" />
+            <stop offset="0.32" stopColor="#FE100E" />
+            <stop offset="0.36" stopColor="#FF0C0A" />
+            <stop offset="0.49" stopColor="#FD2F28" />
+            <stop offset="0.76" stopColor="#FB8975" />
+            <stop offset="1" stopColor="#F9DBBB" />
           </linearGradient>
           <linearGradient
             id="paint2_linear_526_653"
@@ -236,13 +236,13 @@ const Login = () => {
             y2="-0.0216388"
             gradientUnits="userSpaceOnUse"
           >
-            <stop stop-color="#FF0303" />
-            <stop offset="0.1" stop-color="#F60505" />
-            <stop offset="0.25" stop-color="#DF0A0C" />
-            <stop offset="0.45" stop-color="#BA1417" />
-            <stop offset="0.67" stop-color="#852126" />
-            <stop offset="0.92" stop-color="#443239" />
-            <stop offset="1" stop-color="#2E3840" />
+            <stop stopColor="#FF0303" />
+            <stop offset="0.1" stopColor="#F60505" />
+            <stop offset="0.25" stopColor="#DF0A0C" />
+            <stop offset="0.45" stopColor="#BA1417" />
+            <stop offset="0.67" stopColor="#852126" />
+            <stop offset="0.92" stopColor="#443239" />
+            <stop offset="1" stopColor="#2E3840" />
           </linearGradient>
           <linearGradient
             id="paint3_linear_526_653"
@@ -252,17 +252,17 @@ const Login = () => {
             y2="36.1841"
             gradientUnits="userSpaceOnUse"
           >
-            <stop stop-color="#F9DBBB" />
-            <stop offset="0.04" stop-color="#FAAF95" />
-            <stop offset="0.1" stop-color="#FB7E6B" />
-            <stop offset="0.16" stop-color="#FC5548" />
-            <stop offset="0.21" stop-color="#FD352D" />
-            <stop offset="0.27" stop-color="#FE1E19" />
-            <stop offset="0.32" stop-color="#FE100E" />
-            <stop offset="0.36" stop-color="#FF0C0A" />
-            <stop offset="0.48" stop-color="#DB1313" />
-            <stop offset="0.76" stop-color="#81262A" />
-            <stop offset="1" stop-color="#2E3840" />
+            <stop stopColor="#F9DBBB" />
+            <stop offset="0.04" stopColor="#FAAF95" />
+            <stop offset="0.1" stopColor="#FB7E6B" />
+            <stop offset="0.16" stopColor="#FC5548" />
+            <stop offset="0.21" stopColor="#FD352D" />
+            <stop offset="0.27" stopColor="#FE1E19" />
+            <stop offset="0.32" stopColor="#FE100E" />
+            <stop offset="0.36" stopColor="#FF0C0A" />
+            <stop offset="0.48" stopColor="#DB1313" />
+            <stop offset="0.76" stopColor="#81262A" />
+            <stop offset="1" stopColor="#2E3840" />
           </linearGradient>
           <linearGradient
             id="paint4_linear_526_653"
@@ -272,17 +272,17 @@ const Login = () => {
             y2="33.1078"
             gradientUnits="userSpaceOnUse"
           >
-            <stop stop-color="#F9DBBB" />
-            <stop offset="0.04" stop-color="#FAAF95" />
-            <stop offset="0.1" stop-color="#FB7E6B" />
-            <stop offset="0.16" stop-color="#FC5548" />
-            <stop offset="0.21" stop-color="#FD352D" />
-            <stop offset="0.27" stop-color="#FE1E19" />
-            <stop offset="0.32" stop-color="#FE100E" />
-            <stop offset="0.36" stop-color="#FF0C0A" />
-            <stop offset="0.48" stop-color="#DB1313" />
-            <stop offset="0.76" stop-color="#81262A" />
-            <stop offset="1" stop-color="#2E3840" />
+            <stop stopColor="#F9DBBB" />
+            <stop offset="0.04" stopColor="#FAAF95" />
+            <stop offset="0.1" stopColor="#FB7E6B" />
+            <stop offset="0.16" stopColor="#FC5548" />
+            <stop offset="0.21" stopColor="#FD352D" />
+            <stop offset="0.27" stopColor="#FE1E19" />
+            <stop offset="0.32" stopColor="#FE100E" />
+            <stop offset="0.36" stopColor="#FF0C0A" />
+            <stop offset="0.48" stopColor="#DB1313" />
+            <stop offset="0.76" stopColor="#81262A" />
+            <stop offset="1" stopColor="#2E3840" />
           </linearGradient>
           <linearGradient
             id="paint5_linear_526_653"
@@ -292,17 +292,17 @@ const Login = () => {
             y2="34.2633"
             gradientUnits="userSpaceOnUse"
           >
-            <stop stop-color="#F9DBBB" />
-            <stop offset="0.04" stop-color="#FAAF95" />
-            <stop offset="0.1" stop-color="#FB7E6B" />
-            <stop offset="0.16" stop-color="#FC5548" />
-            <stop offset="0.21" stop-color="#FD352D" />
-            <stop offset="0.27" stop-color="#FE1E19" />
-            <stop offset="0.32" stop-color="#FE100E" />
-            <stop offset="0.36" stop-color="#FF0C0A" />
-            <stop offset="0.48" stop-color="#DB1313" />
-            <stop offset="0.76" stop-color="#81262A" />
-            <stop offset="1" stop-color="#2E3840" />
+            <stop stopColor="#F9DBBB" />
+            <stop offset="0.04" stopColor="#FAAF95" />
+            <stop offset="0.1" stopColor="#FB7E6B" />
+            <stop offset="0.16" stopColor="#FC5548" />
+            <stop offset="0.21" stopColor="#FD352D" />
+            <stop offset="0.27" stopColor="#FE1E19" />
+            <stop offset="0.32" stopColor="#FE100E" />
+            <stop offset="0.36" stopColor="#FF0C0A" />
+            <stop offset="0.48" stopColor="#DB1313" />
+            <stop offset="0.76" stopColor="#81262A" />
+            <stop offset="1" stopColor="#2E3840" />
           </linearGradient>
           <linearGradient
             id="paint6_linear_526_653"
@@ -312,17 +312,17 @@ const Login = () => {
             y2="37.6448"
             gradientUnits="userSpaceOnUse"
           >
-            <stop stop-color="#F9DBBB" />
-            <stop offset="0.04" stop-color="#FAAF95" />
-            <stop offset="0.1" stop-color="#FB7E6B" />
-            <stop offset="0.16" stop-color="#FC5548" />
-            <stop offset="0.21" stop-color="#FD352D" />
-            <stop offset="0.27" stop-color="#FE1E19" />
-            <stop offset="0.32" stop-color="#FE100E" />
-            <stop offset="0.36" stop-color="#FF0C0A" />
-            <stop offset="0.48" stop-color="#DB1313" />
-            <stop offset="0.76" stop-color="#81262A" />
-            <stop offset="1" stop-color="#2E3840" />
+            <stop stopColor="#F9DBBB" />
+            <stop offset="0.04" stopColor="#FAAF95" />
+            <stop offset="0.1" stopColor="#FB7E6B" />
+            <stop offset="0.16" stopColor="#FC5548" />
+            <stop offset="0.21" stopColor="#FD352D" />
+            <stop offset="0.27" stopColor="#FE1E19" />
+            <stop offset="0.32" stopColor="#FE100E" />
+            <stop offset="0.36" stopColor="#FF0C0A" />
+            <stop offset="0.48" stopColor="#DB1313" />
+            <stop offset="0.76" stopColor="#81262A" />
+            <stop offset="1" stopColor="#2E3840" />
           </linearGradient>
           <linearGradient
             id="paint7_linear_526_653"
@@ -332,17 +332,17 @@ const Login = () => {
             y2="35.0036"
             gradientUnits="userSpaceOnUse"
           >
-            <stop stop-color="#F9DBBB" />
-            <stop offset="0.04" stop-color="#FAAF95" />
-            <stop offset="0.1" stop-color="#FB7E6B" />
-            <stop offset="0.16" stop-color="#FC5548" />
-            <stop offset="0.21" stop-color="#FD352D" />
-            <stop offset="0.27" stop-color="#FE1E19" />
-            <stop offset="0.32" stop-color="#FE100E" />
-            <stop offset="0.36" stop-color="#FF0C0A" />
-            <stop offset="0.48" stop-color="#DB1313" />
-            <stop offset="0.76" stop-color="#81262A" />
-            <stop offset="1" stop-color="#2E3840" />
+            <stop stopColor="#F9DBBB" />
+            <stop offset="0.04" stopColor="#FAAF95" />
+            <stop offset="0.1" stopColor="#FB7E6B" />
+            <stop offset="0.16" stopColor="#FC5548" />
+            <stop offset="0.21" stopColor="#FD352D" />
+            <stop offset="0.27" stopColor="#FE1E19" />
+            <stop offset="0.32" stopColor="#FE100E" />
+            <stop offset="0.36" stopColor="#FF0C0A" />
+            <stop offset="0.48" stopColor="#DB1313" />
+            <stop offset="0.76" stopColor="#81262A" />
+            <stop offset="1" stopColor="#2E3840" />
           </linearGradient>
           <linearGradient
             id="paint8_linear_526_653"
@@ -352,66 +352,71 @@ const Login = () => {
             y2="30.0215"
             gradientUnits="userSpaceOnUse"
           >
-            <stop stop-color="#F9DBBB" />
-            <stop offset="0.04" stop-color="#FAAF95" />
-            <stop offset="0.1" stop-color="#FB7E6B" />
-            <stop offset="0.16" stop-color="#FC5548" />
-            <stop offset="0.21" stop-color="#FD352D" />
-            <stop offset="0.27" stop-color="#FE1E19" />
-            <stop offset="0.32" stop-color="#FE100E" />
-            <stop offset="0.36" stop-color="#FF0C0A" />
-            <stop offset="0.48" stop-color="#DB1313" />
-            <stop offset="0.76" stop-color="#81262A" />
-            <stop offset="1" stop-color="#2E3840" />
+            <stop stopColor="#F9DBBB" />
+            <stop offset="0.04" stopColor="#FAAF95" />
+            <stop offset="0.1" stopColor="#FB7E6B" />
+            <stop offset="0.16" stopColor="#FC5548" />
+            <stop offset="0.21" stopColor="#FD352D" />
+            <stop offset="0.27" stopColor="#FE1E19" />
+            <stop offset="0.32" stopColor="#FE100E" />
+            <stop offset="0.36" stopColor="#FF0C0A" />
+            <stop offset="0.48" stopColor="#DB1313" />
+            <stop offset="0.76" stopColor="#81262A" />
+            <stop offset="1" stopColor="#2E3840" />
           </linearGradient>
         </defs>
       </svg>
       <div className="Long_Line"></div>
       <span className="Header_span">Vous n'êtes pas un membre?</span>
-      <button className="Header_button">
+      <button
+        onClick={() => {
+          navigate("/register");
+        }}
+        className="Header_button"
+      >
         {" "}
         <span>Rejoignez Nous!</span>{" "}
       </button>
       <div className="container">
         <span className="Big_Title">Se Connecter</span>
-        <form>
-        <div className="User_Box">
-          <input
-            className="input_Email"
-            required
-            id="email"
-            type="text"
-            value={formik.values.email}
-            onChange={formik.handleChange}
-          />
-          <label className="Email">Email</label>
-        </div>
-        <div className="User_Box">
-          <input
-            className="input_Password"
-            required
-            type={passwordType}
-            id="password"
-            value={formik.values.password}
-            onChange={formik.handleChange}
-          />
-          <label className="Mot_de_passe" type="Hidden">
-            Mot de passe
-          </label>
-        </div>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-          <button onClick={()=>{console.log("HELLO");}}className = "CNXbutton" type="submit"> Se Connecter </button>
-        <div className="Checkbox_Container">
-          <input type="checkbox" className="Checkbox" />
-          <label className="Souvenir"> Se souvenir de moi</label>
-          <div className="Vl"></div>
-          <a className="F_Password" href="#">
-            Mot de passe oublié?
-          </a>
-        </div></form>
+        <form onSubmit={formik.handleSubmit}>
+          <div className="User_Box">
+            <input
+              className="input_Email"
+              required
+              id="email"
+              type="text"
+              value={formik.values.email}
+              onChange={formik.handleChange}
+            />
+            <label className="Email">Email</label>
+          </div>
+          <div className="User_Box">
+            <input
+              className="input_Password"
+              required
+              type={passwordType}
+              id="password"
+              value={formik.values.password}
+              onChange={formik.handleChange}
+            />
+            <label className="Mot_de_passe" type="Hidden">
+              Mot de passe
+            </label>
+          </div>
+          <button className="CNXbutton" type="submit">
+            {" "}
+            Se Connecter{" "}
+          </button>
+          <div className="Checkbox_Container">
+            <input type="checkbox" className="Checkbox" />
+            <label className="Souvenir"> Se souvenir de moi</label>
+            <div className="Vl"></div>
+            <a className="F_Password" href="#">
+              Mot de passe oublié?
+            </a>
+          </div>
+        </form>
       </div>
     </>
   );
