@@ -14,6 +14,7 @@ import Events from "./components/Events";
 function App() {
   return (
     <div className="App">
+    {/* <Navbar/> */}
       <Routes>
         <Route path="/" element={<Home />}></Route>
         <Route path="/login" exact element={<Login />} />
