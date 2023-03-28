@@ -50,6 +50,13 @@ const Profile = () => {
       <button
         className="bg-blue-700 hover:bg-blue-dark text-white font-bold py-2 px-4 rounded"
         type="button"
+        onClick={()=>navigate('/addBlog')}
+      >
+        Add Blog
+      </button>
+      <button
+        className="bg-blue-700 hover:bg-blue-dark text-white font-bold py-2 px-4 rounded"
+        type="button"
         onClick={() => navigate("/waitings_dashboard")}
       >
         WaitingsList
