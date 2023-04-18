@@ -3,54 +3,72 @@ import { Buffer } from "buffer";
 import { React, useEffect, useState } from "react";
 import { useAuthHeader, useAuthUser, useSignOut } from "react-auth-kit";
 import { useNavigate } from "react-router-dom";
-
+import { Image } from "cloudinary-react";
 const Profile = () => {
   const authHeader = useAuthHeader();
   const signOut = useSignOut();
   const auth = useAuthUser();
   let navigate = useNavigate();
-  const [imageSrc, setImageSrc] = useState(null);
+  const [imageSelected, setImageSelected] = useState("");
+  const [imagePublicId, setImagePublicId] = useState("");
+
+  const formatted = (str) => {
+    return str.substring(str.indexOf(":") + 3, str.length - 4);
+  };
+  //request configuration with jwt token
+  let config = {
+    headers: { authorization: `${authHeader()}` },
+    responseType: "buffer",
+  };
+  let bodyParameters = {
+    key: "value",
+  };
   useEffect(() => {
-    //request configuration with jwt token
-    const config = {
-      headers: { authorization: `${authHeader()}` },
-      responseType: "buffer",
-    };
-    const bodyParameters = {
-      key: "value",
-    };
     axios
       .get("http://localhost:3030/getImage", config, bodyParameters)
       .then((response) => {
-        let jsObj = JSON.parse(response.data);
-        console.log(jsObj.data);
-        const contentType = "image/png";
-        const uintArray = new Uint8Array(jsObj.data);
-        const blob = new Blob([uintArray], {
-          type: "image/png",
-        });
-        const url = URL.createObjectURL(blob);
-        console.log('blob size',blob.size);
-        console.log(url);
-        setImageSrc(url);
+        setImagePublicId(formatted(response.data));
       });
-    axios.post("http://localhost:4000/profile", bodyParameters, config);
   }, []);
-
+  const uploadImage = () => {
+    const formData = new FormData();
+    formData.append("file", imageSelected);
+    formData.append("upload_preset", "hjtuncd9");
+    try {
+      axios
+        .post(
+          "https://api.cloudinary.com/v1_1/dibcmwnvo/image/upload",
+          formData
+        )
+        .then((res) => {
+          setImagePublicId(res.data.public_id);
+          console.log(imagePublicId);
+          //store the public id in the db
+          config = {
+            headers: { authorization: `${authHeader()}` },
+            responseType: "buffer",
+          };
+          bodyParameters = {
+            key: "value",
+            link: res.data.public_id,
+          };
+          axios.post("http://localhost:3030/setPhoto", bodyParameters, config);
+        });
+    } catch (err) {}
+  };
   return (
     <div className="flex-col">
       Welcome to profile!!{auth().email}
       <button
         className="bg-blue-700 hover:bg-blue-dark text-white font-bold py-2 px-4 rounded"
-        type="button"
-        onClick={signOut}
+        onClick={() => signOut()}
       >
         Sign out
       </button>
       <button
         className="bg-blue-700 hover:bg-blue-dark text-white font-bold py-2 px-4 rounded"
         type="button"
-        onClick={()=>navigate('/addBlog')}
+        onClick={() => navigate("/addBlog")}
       >
         Add Blog
       </button>
@@ -61,7 +79,25 @@ const Profile = () => {
       >
         WaitingsList
       </button>
-      <img src={imageSrc} alt="image"></img>
+      <input
+        type="file"
+        onChange={(e) => {
+          setImageSelected(e.target.files[0]);
+        }}
+      />
+      <button
+        className="bg-blue-700 hover:bg-blue-dark text-white font-bold py-2 px-4 rounded"
+        onClick={() => uploadImage()}
+      >
+        Update photo
+      </button>
+      {imagePublicId != null && (
+        <Image
+          cloudName="dibcmwnvo"
+          public_id={imagePublicId}
+          className="rounded-full"
+        />
+      )}
     </div>
   );
 };
