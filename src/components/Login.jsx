@@ -29,9 +29,11 @@ const Login = () => {
         navigate("/profile");
       } catch (err) {
         if (err.response.status == 404) {
-          setError("Email does not exist!");
+          console.log("RERERE");
+          alert("Email does not exist!");
+
         } else {
-          setError("Wrong password check again...");
+          alert("Wrong password check again...");
         }
       }
     },
