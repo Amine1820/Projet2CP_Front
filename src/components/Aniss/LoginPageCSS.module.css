@@ -1,0 +1,362 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-image: url("../../Front_assets/image_login.png");
+  position: relative;
+  z-index: -1;
+}
+.container {
+  position: absolute;
+  left: 50%;
+  top: 25rem;
+  color: #f9dbbb;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  border-radius: 14px;
+  padding: 60px 32px;
+  z-index: 1;
+  font-size: 35px;
+  border: 1px solid #f9dbbb;
+  width: 500px;
+  height: 495px;
+  background-color: rgba(249, 219, 187, 0.5);
+  box-shadow: 0 0 6px 0 rgba(29, 29, 29, 0.203);
+}
+span {
+  position: absolute;
+  right: 9rem;
+  top: 2rem;
+}
+.container .User_Box {
+  position: relative;
+}
+.input_Email {
+  position: absolute;
+  top: 5rem;
+  right: 0.00001rem;
+  width: 100%;
+  padding: 10px 0;
+  font-size: 16px;
+  color: #2e3840;
+  margin-bottom: 30px;
+  border: none;
+  border-bottom: 1px solid #2e3840;
+  outline: none;
+  background: transparent;
+}
+.input_Password {
+  position: absolute;
+  top: 12rem;
+  right: 0.00001rem;
+  width: 100%;
+  padding: 10px 0;
+  font-size: 16px;
+  color: #2e3840;
+  margin-bottom: 30px;
+  border: none;
+  border-bottom: 1px solid #2e3840;
+  outline: none;
+  background: transparent;
+}
+input:focus + .Email {
+  outline: none;
+}
+input:focus + .Email,
+input:valid + .Email {
+  transform: translateY(-50%);
+  font-size: 14px;
+  left: 0px;
+  color: #f9dbbb;
+}
+input:focus + .Email::after,
+input:valid + .Email::after {
+  transform: translateX(0%);
+}
+input:focus + .Mot_de_passe {
+  outline: none;
+}
+input:focus + .Mot_de_passe,
+input:valid + .Mot_de_passe {
+  transform: translateY(-50%);
+  font-size: 14px;
+  left: 0px;
+  color: #f9dbbb;
+}
+input:focus + .Mot_de_passe::after,
+input:valid + .Mot_de_passe::after {
+  transform: translateX(0%);
+}
+
+.Email {
+  position: absolute;
+  top: 5rem;
+  left: 1.2rem;
+  font-family: "poppins";
+  padding: 10px 0;
+  font-size: 16px;
+  color: #2e3840;
+  pointer-events: none;
+  transition: 0.5s;
+}
+.Email::after {
+  content: "";
+  position: absolute;
+  bottom: -1px;
+  left: 0px;
+  width: 50%;
+  height: 100%;
+
+  transform: translateX(-100%);
+  transition: all 0.3s ease;
+}
+.Mot_de_passe::after {
+  content: "";
+  position: absolute;
+  bottom: -1px;
+  left: 0px;
+  width: 50%;
+  height: 100%;
+
+  transform: translateX(-100%);
+  transition: all 0.3s ease;
+}
+.Mot_de_passe {
+  position: absolute;
+  font-family: "poppins";
+  top: 12rem;
+  left: 1.2rem;
+  padding: 10px 0;
+  font-size: 16px;
+  color: #2e3840;
+  pointer-events: none;
+  transition: 0.5s;
+}
+.CNXbutton {
+  position: absolute;
+  top: 21rem;
+  border-radius: 8px;
+  background-color: #2e3840;
+  width: 88%;
+  height: 15%;
+  display: block;
+  right: 1.3rem;
+  left: 2rem;
+}
+button {
+  font-family: "poppins";
+  text-align: center;
+
+  font-size: 26px;
+  width: 440px;
+  margin: 0;
+  height: 75px;
+  display: block;
+}
+.Checkbox_Container {
+  position: absolute;
+  top: 27rem;
+  font-size: 16px;
+  color: white;
+  left: 3rem;
+  font-family: "Poppins";
+}
+.Checkbox {
+  appearance: none;
+  background-color: rgba(249, 219, 187, 0);
+  margin: 0;
+  font: inherit;
+  color: currentColor;
+  width: 23px;
+  height: 22px;
+  border: 0.15em solid currentColor;
+  transform: translateY(-0.075em);
+  display: grid;
+  place-content: center;
+  cursor: pointer;
+}
+.Souvenir {
+  position: absolute;
+  left: 30px;
+  font-size: 15.62px;
+  font-family: "Poppins";
+  height: 24px;
+  top: -2px;
+  width: 93px;
+  white-space: nowrap;
+  bottom: 12px;
+  display: block;
+}
+.Checkbox::before {
+  content: "";
+  width: 0.65em;
+  height: 0.65em;
+  transform: scale(0);
+  transition: 220ms transform ease-in-out;
+  box-shadow: inset 1em 1em var(--form-control-color);
+  background-color: #2e3840;
+  transform-origin: bottom left;
+  clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%);
+}
+input[type="checkbox"]:checked::before {
+  transform: scale(1);
+}
+.Vl {
+  top: -10px;
+  left: 213px;
+  position: absolute;
+  border-left: 1px solid #efeeee;
+  height: 40px;
+}
+.F_Password {
+  position: absolute;
+  top: 0px;
+  left: 15.5rem;
+  font-size: 15px;
+  color: #d9d9d9;
+  display: block;
+  white-space: nowrap;
+}
+
+img {
+  width: 300px;
+
+  padding: 20px 40px;
+  margin: auto;
+  display: inline-block;
+}
+.Header_span {
+  color: white;
+  font-family: "Poppins";
+  font-size: 16px;
+  padding-right: 150px;
+}
+/*.Header_button{
+  font-size: 16px;
+  font-family: 'Poppins';
+  color: #F9DBBB;
+  border:1px solid white;
+  left: 105rem;
+  border-radius: 15px;
+  bottom: -19px;
+  height: 70px;
+  position: absolute;
+  width: 200px;
+  text-align: center;
+  
+}*/
+.Header_button,
+.Header_button *,
+.Header_button:after,
+.Header_button:before,
+.Header_button:after,
+.Header_button:before {
+  border: 0 solid;
+  box-sizing: border-box;
+}
+.Header_button {
+  position: absolute;
+  left: 0;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-appearance: button;
+  appearance: none;
+  background-image: none;
+  color: rgb(255, 8, 8);
+  cursor: pointer;
+  font-family: "Poppins";
+  font-size: 16px;
+  margin: 0;
+  -webkit-mask-image: -webkit-radial-gradient(#000, #fff);
+  padding: 0;
+}
+.Header_button:disabled {
+  cursor: default;
+}
+.Header_button:-moz-focusring {
+  outline: auto;
+}
+.Header_button svg {
+  display: block;
+  vertical-align: middle;
+}
+.Header_button [hidden] {
+  display: none;
+}
+.Header_button {
+  border-radius: 15px;
+  color: #f9dbbb;
+  border-width: 1px;
+  overflow: hidden;
+  padding: 0.8rem 3rem;
+  position: absolute;
+  top: 9px;
+  left: 104rem;
+  text-align: center;
+  width: 230px;
+}
+.Header_button span {
+  mix-blend-mode: difference;
+  position: absolute;
+  z-index: 1;
+  top: 21px;
+  white-space: nowrap;
+  left: 45px;
+}
+.Header_button:after,
+.Header_button:before {
+  background: #2e3840;
+  -webkit-clip-path: polygon(
+    0 0,
+    100% 0,
+    100% calc(var(--progress, 0%) / 2),
+    0 calc(var(--progress, 0%) / 2),
+    0 0,
+    0 calc(100% - var(--progress, 0%) / 2),
+    100% calc(100% - var(--progress, 0%) / 2),
+    100% 100%,
+    0 100%,
+    0 calc(100% - var(--progress, 0%) / 2)
+  );
+  clip-path: polygon(
+    0 0,
+    100% 0,
+    100% calc(var(--progress, 0%) / 2),
+    0 calc(var(--progress, 0%) / 2),
+    0 0,
+    0 calc(100% - var(--progress, 0%) / 2),
+    100% calc(100% - var(--progress, 0%) / 2),
+    100% 100%,
+    0 100%,
+    0 calc(100% - var(--progress, 0%) / 2)
+  );
+  content: "";
+  inset: 0;
+  position: absolute;
+  transform: translateX(calc(100% - var(--progress, 0%) / 1.99));
+  transition: transform 0.2s ease, -webkit-clip-path 0.2s ease;
+  transition: clip-path 0.2s ease, transform 0.2s ease;
+  transition: clip-path 0.2s ease, transform 0.2s ease,
+    -webkit-clip-path 0.2s ease;
+}
+.Header_button:after {
+  transform: translateX(calc(-100% + var(--progress, 0%) / 1.99));
+}
+.Header_button:hover {
+  --progress: 100%;
+}
+.Long_Line {
+  border-bottom: 1px solid rgba(249, 219, 187, 0.33);
+  position: absolute;
+  bottom: -10px;
+  margin: auto;
+  left: 40px;
+  top: -20px;
+  height: 150px;
+  width: 1850px;
+}
